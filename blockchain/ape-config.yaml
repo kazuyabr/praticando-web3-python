@@ -1,0 +1,16 @@
+networks:
+  default:
+    node_url: ${NODE_URL}
+  local:
+    node_url: http://localhost:8545
+  polygon_mainnet:
+    node_url: ${INFURA_POLYGON_MAINNET_URL}
+
+plugins:
+  - name: vyper
+  - name: solidity
+
+dependencies:
+  - name: OpenZeppelin
+    github: OpenZeppelin/openzeppelin-contracts
+    version: 4.6.0
