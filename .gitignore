@@ -129,6 +129,8 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+.api
+.blockchain
 
 # Spyder project settings
 .spyderproject
