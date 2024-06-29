@@ -1,6 +1,52 @@
+default_ecosystem: ethereum
+
+networks:
+  custom:
+     - name: ganache                  # Required
+       chain_id: 1337                  # Required
+       ecosystem: ethereum            # The ecosystem name, can either be new or an existing
+       base_ecosystem_plugin: ethereum  # The ecosystem base-class, defaults to the default ecosystem
+
+node:
+  ethereum:
+    ganache:
+      uri: http://127.0.0.1:7545
+
 plugins:
-  - name: vyper
+  - name: alchemy
+    version: 0.8.0
+  - name: arbitrum
+    version: 0.8.0
+  - name: avalanche
+    version: 0.8.0
+  - name: base
+    version: 0.8.0
+  - name: blast
+    version: 0.8.0
+  - name: bsc
+    version: 0.8.0
+  - name: ens
+    version: 0.8.0
+  - name: etherscan
+    version: 0.8.0
+  - name: fantom
+    version: 0.8.0
+  - name: infura
+    version: 0.8.0
+  - name: optimism
+    version: 0.8.0
+  - name: polygon
+    version: 0.8.0
+  - name: polygon-zkevm
+    version: 0.8.0
   - name: solidity
+    version: 0.8.2
+  - name: tokens
+    version: 0.8.0
+
+console:
+  plugins:
+    - autoreload
 
 dependencies:
   - name: OpenZeppelin
