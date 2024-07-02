@@ -11,3 +11,11 @@
  ## Geração de contas
  1 - ape accounts generate <name_account>(gera conta para trabalhar com o console)
  2 - ape accounts export <name_account>(exporta a chave privada)
+
+ ## Console
+ 1 - ape console --network <ecosystem>:<network_name>:<node_name>
+
+
+ ## Deploy
+ 1 - ape run <script_file without extension> --network <ecosystem>:<network_name>:<node_name> (script exemplo ape run deploy)
+ 

@@ -12,6 +12,18 @@ node:
     ganache:
       uri: http://127.0.0.1:7545
 
+
+ethereum:
+  default_network: mainnet-fork
+  mainnet:
+    default_provider: infura
+  mainnet_fork:
+    default_provider: ganache
+
+test:
+  mnemonic: test test test test test test test test test test test junk
+  number_of_accounts: 5
+
 plugins:
   - name: alchemy
     version: 0.8.0
@@ -51,4 +63,12 @@ console:
 dependencies:
   - name: OpenZeppelin
     github: OpenZeppelin/openzeppelin-contracts
-    version: 4.6.0
+    version: 4.8.1
+  - name: openzeppelin-upgradeable
+    github: OpenZeppelin/openzeppelin-contracts-upgradeable
+    version: 4.8.1
+
+solidity:
+  import_remapping:
+    - "@openzeppelin/contracts=openzeppelin/v4.8.1"
+    - "@openzeppelin/contracts-upgradeable=openzeppelin-upgradeable/v4.8.1"

@@ -1,2 +1,3 @@
 python-dotenv==1.0.1
 eth-ape==0.8.5
+eip712==0.2.7
